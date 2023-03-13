@@ -2,6 +2,7 @@
     "recommendations": [
         "ms-vscode.makefile-tools",
         "editorconfig.editorconfig",
-        "ardisaurus.gitflow-actions-sidebar"
+        "ardisaurus.gitflow-actions-sidebar",
+        "shyykoserhiy.git-autoconfig"
     ]
 }
