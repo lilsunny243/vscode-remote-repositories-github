@@ -15,6 +15,17 @@
             "cmsisPack": "<path or URL of CMSIS Pack for your device>",
             "debugFrom": "main"
         },
+
+
+        {
+            "name": "Embedded Debug",
+            "type": "embedded-debug",
+            "request": "launch",
+            "serialNumber": "<serial number of your device>",
+            "program": "${command:embedded-debug.getApplicationFile}",
+            "cmsisPack": "<path or URL of CMSIS Pack for your device>",
+            "debugFrom": "main"
+        },
         {
             "name": "Arm Debug",
             "type": "arm-debug",
