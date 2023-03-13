@@ -1,0 +1,48 @@
+{
+    // Verwendet IntelliSense zum Ermitteln möglicher Attribute.
+    // Zeigen Sie auf vorhandene Attribute, um die zugehörigen Beschreibungen anzuzeigen.
+    // Weitere Informationen finden Sie unter https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+
+
+        {
+            "name": "Embedded Debug",
+            "type": "embedded-debug",
+            "request": "launch",
+            "serialNumber": "<serial number of your device>",
+            "program": "${command:embedded-debug.getApplicationFile}",
+            "cmsisPack": "<path or URL of CMSIS Pack for your device>",
+            "debugFrom": "main"
+        },
+        {
+            "name": "Arm Debug",
+            "type": "arm-debug",
+            "request": "attach",
+            "address": "Websocket (ws://<host>:<port>) or socket (<host>:<port>) to connect to"
+        },
+        {
+            "name": "Arm Debug",
+            "type": "arm-debug",
+            "request": "launch",
+            "program": "${command:embedded-debug.getApplicationFile}",
+            "serialNumber": "<serial number of your device>",
+            "cmsisDevice": "<concatenation of CMSIS pack name, device vendor, device name and processor name>",
+            "probe": "CMSIS-DAP",
+            "debugFrom": "main"
+        },
+
+        {
+            "name": "Attach to Kubernetes Pod (Go)",
+            "type": "cloudcode.kubernetes",
+            "request": "attach",
+            "language": "Go",
+            "debugPort": 2345,
+            "podSelector": {
+                "app": "deployment-name"
+            },
+            "localRoot": "${workspaceFolder}",
+            "remoteRoot": "/go/src/app"
+        }
+    ]
+}
