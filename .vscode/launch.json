@@ -5,8 +5,28 @@
     "version": "0.2.0",
     "configurations": [
 
+        [
 
 
+
+        {
+            "name": "Arm Debug",
+            "type": "arm-debug",
+            "request": "attach",
+            "address": "Websocket (ws://<host>:<port>) or socket (<host>:<port>) to connect to"
+        },
+        {
+            "name": "Embedded Debug",
+            "type": "embedded-debug",
+            "request": "launch",
+            "serialNumber": "<serial number of your device>",
+            "program": "${command:embedded-debug.getApplicationFile}",
+            "cmsisPack": "<path or URL of CMSIS Pack for your device>",
+            "debugFrom": "main"
+        log.debug("The value of the variable is: " + variable);
+
+
+log.Println("Hello world!")
         {
             "name": "Embedded Debug",
             "type": "embedded-debug",
